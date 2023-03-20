@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Product Search by SKU</title>
+    </head>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Product Search by SKU</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="product_search_by_sku" template="Lfc_Retail::product-search-by-sku.phtml">
+                <arguments>
+                    <argument name="view_model" xsi:type="object">\Lfc\Retail\ViewModels\SearchForm</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
