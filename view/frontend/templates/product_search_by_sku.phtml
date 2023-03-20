@@ -1,0 +1,6 @@
+<form name="addData" method="post" id="addData" class="form" action="<?php echo $block->getUrl($block->getViewModel()->getFormActionRoute(),['_secure' => true]); ?>">
+    <input name="product_sku" id="product_sku" title="Product Sku" value="" class="input-text" type="text">
+    <div class="primary">
+        <button type="submit" class="action submit primary" title="Save"><span><?= $block->escapeHtmlAttr(__('Save')) ?></span></button>
+    </div>
+</form>
