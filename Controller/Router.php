@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Lfc\Retail\Controller;
 
+use Lfc\Retail\Controller\Form\Form;
 use Magento\Framework\App\Request\Http as HttpRequest;
 use Magento\Framework\App\RequestInterface;
 use Magento\Framework\App\RouterInterface;
@@ -21,7 +22,7 @@ class Router implements RouterInterface
     {
         $identifier = trim($request->getPathInfo(), '/');
 
-        if (strpos($identifier, 'lfc-retail/m2-test') !== false) {
+        if (strpos($identifier, Form::FORM_URL) !== false) {
             $request->setRouteName('lfc');
             $request->setControllerName('form');
             $request->setActionName('form');
